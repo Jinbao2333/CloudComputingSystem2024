@@ -19,7 +19,7 @@
 
 ##### 最终截图如下。
 
-![VirtualBox Running OpenStack](images/Cloud_Openstack.png)
+![VirtualBox Running OpenStack](images/Cloud_OpenStack.png)
 
 #### 3. Powershell 登录后台
 
