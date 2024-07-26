@@ -23,7 +23,7 @@
 22. SIGMOD23-Using Cloud Functions as Accelerator for Elastic Data Analytics.
 23. <span style="color: #F04B22;">SIGMOD23-PolarDB-IMCI: A Cloud-Native HTAP Database System at Alibaba</span>
 24. SIGMOD22-TimeUnion: An Efficient Architecture with Unified Data Model for Timeseries Management Systems on Hybrid Cloud Storage
-25. <span style="color: #EBC004;">Found&trends21-Cloud Data Services: Workloads, Architectures and Multi-Tenancy
+25. <span style="color: #EBC004;">Found&trends21-Cloud Data Services: Workloads, Architectures and Multi-Tenancy</span>
 26. SIGMOD21-ArkDB: A Key-Value Engine for Scalable Cloud Storage Services.
 27. <span style="color: #F04B22;">VLDB24-Intelligent Pooling: Proactive Resource Provisioning in Large-scale Cloud Service.</span>
 28. VLDB23-InfiniStore: Elastic Serverless Cloud Storage
