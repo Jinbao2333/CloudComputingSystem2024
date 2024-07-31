@@ -1,0 +1,199 @@
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\ifLuaTeX
+  \usepackage{luacolor}
+  \usepackage[soul]{lua-ul}
+\else
+  \usepackage{soul}
+\fi
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\usepackage{geometry} % Add the geometry package
+\geometry{margin=1in} % Set all margins to 1 inch (2.54 cm)
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Summary of Paper No.31: RESCU-SQL: Oblivious Querying for the
+Zero Trust
+Cloud}\label{summary-of-paper-no31-rescu-sql-oblivious-querying-for-the-zero-trust-cloud}
+
+Student Name: \textbf{Jiaqi Jiang} Student ID: \textbf{10225501447}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{\texorpdfstring{\textbf{1 Research
+Context}}{1 Research Context}}\label{1--research-context}
+
+Cloud services are increasingly used for DBMS applications due to their
+availability and cost-effectiveness. However, high-stakes applications,
+such as defense and healthcare, face challenges due to confidentiality
+and regulatory requirements, making it difficult to trust third-party
+\ul{c}loud \ul{s}ervice \ul{p}roviders (\textbf{CSP}s) with sensitive
+data.
+
+\subsubsection{\texorpdfstring{\textbf{2 Main Problem
+Addressed}}{2 Main Problem Addressed}}\label{2--main-problem-addressed}
+
+The paper addresses the challenge of securely querying databases in a
+zero-trust cloud environment, where users cannot trust CSPs with their
+private data, as it impacts the adoption of cloud services in sensitive
+domains where data breaches can have severe consequences.
+
+\subsubsection{\texorpdfstring{\textbf{3 Core Idea and
+Methods}}{3 Core Idea and Methods}}\label{3--core-idea-and-methods}
+
+\paragraph{3.1 Core Idea}\label{31--core-idea}
+
+The core idea is the development of RESCU-SQL, a platform that allows
+resilient and secure SQL querying on untrusted cloud servers. The system
+leverages secure \ul{m}ulti\ul{p}arty \ul{c}omputation (\textbf{MPC}) to
+ensure that queries can be executed without revealing private data to
+the cloud servers.
+
+\paragraph{3.2 Technics and Methods}\label{32--technics-and-methods}
+
+Technical methods include the use of an authenticated garbling protocol
+extended to the outsourced setting. A trusted coordinator generates and
+distributes authenticated secret shares to reduce communication and
+memory costs, making the protocol efficient.
+
+\subsubsection{\texorpdfstring{\textbf{4 Reviews: Innovativeness and
+Originality}}{4 Reviews: Innovativeness and Originality}}\label{4--reviews-innovativeness-and-originality}
+
+Combining MPC with a trusted coordinator to achieve secure SQL querying
+in a zero-trust cloud environment. The approach is original in its
+extension of the authenticated garbling protocol to an outsourced
+setting and its ability to tolerate up to \( n-1 \) corrupted servers.
+
+\subsubsection{\texorpdfstring{\textbf{5 Strengths \&
+Weaknesses}}{5 Strengths \& Weaknesses}}\label{5--strengths--weaknesses}
+
+\paragraph{5.1 Strengths}\label{51--strengths}
+
+\begin{itemize}
+\item
+  \textbf{Robust Security Model}
+
+  \begin{itemize}
+  \item
+    The paper provides a comprehensive security analysis demonstrating
+    the robustness of RESCU-SQL against various attack vectors,
+    including passive and active adversaries.
+  \item
+    \(\boxed{\text{Commentary}}\): The thoroughness of the security
+    analysis is crucial for high-stakes applications where even minor
+    vulnerabilities can have significant consequences. This depth of
+    analysis builds confidence in the system\textquotesingle s security
+    guarantees.
+  \end{itemize}
+\item
+  \textbf{Minimized Trusted Computing Base (TCB)}
+
+  \begin{itemize}
+  \item
+    By limiting the trusted computing base to a small, trusted
+    coordinator, the system reduces the trust requirements on the cloud
+    servers.
+  \item
+    \(\boxed{\text{Commentary}}\): A minimized TCB enhances the overall
+    security posture of the system, as fewer components need to be
+    trusted and protected. This design choice also simplifies the
+    security audit process.
+  \end{itemize}
+\item
+  \textbf{Scalability}
+
+  \begin{itemize}
+  \item
+    The system is designed to scale with the number of cloud servers,
+    making it suitable for large-scale deployments.
+  \item
+    \(\boxed{\text{Commentary}}\): Scalability is crucial for real-world
+    applications, especially in environments with large datasets and
+    complex queries.
+  \end{itemize}
+\end{itemize}
+
+\paragraph{5.2 Weaknesses}\label{52--weaknesses}
+
+\begin{itemize}
+\item
+  \textbf{Performance Overhead}
+
+  \begin{itemize}
+  \item
+    The system incurs a substantial performance overhead compared to
+    plaintext querying, with slowdowns of several orders of magnitude.
+  \item
+    \(\boxed{\text{Commentary}}\): While security is enhanced, the
+    performance trade-off might limit the adoption in scenarios where
+    query speed is critical. For example, real-time analytics or
+    interactive querying might be infeasible with the current
+    performance overhead.
+  \end{itemize}
+\item
+  \textbf{Complexity of Implementation}
+
+  \begin{itemize}
+  \item
+    The system\textquotesingle s reliance on a trusted coordinator and
+    MPC protocols introduces complexity in implementation and
+    deployment.
+  \item
+    \(\boxed{\text{Commentary}}\): The implementation complexity of
+    RESCU-SQL is significant due to the intricate cryptographic
+    protocols, the need for secure infrastructure, and the challenges of
+    integrating with existing systems while maintaining performance. For
+    example, it is very hard to modify existing DBMS to support secure
+    querying without compromising performance.
+  \end{itemize}
+\end{itemize}
+
+\end{document}
