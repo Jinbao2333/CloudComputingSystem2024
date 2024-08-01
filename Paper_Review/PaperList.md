@@ -30,7 +30,7 @@
 28. VLDB23-InfiniStore: Elastic Serverless Cloud Storage
 29. VLDB23-Towards Migration-Free Just-In-Case Data Archival for Future Cloud Data Lakes
 30. VLDB23-Exploiting Cloud Object Storage for High-Performance Analytics
-31. <span style="color: #D0104C;">VLDB23-RESCU-SQL: Oblivious Querying for the Zero Trust Cloud.</span>
+**31. <span style="color: #D0104C;">VLDB23-RESCU-SQL: Oblivious Querying for the Zero Trust Cloud.</span>**
 32. FAST24-What's the Story in EBS Glory: Evolutions and Lessons in Building Cloud Block Store
 33. FAST24-MinFlow: High-performance and Cost-efficient Data Passing for I/O-intensive Stateful Serverless Analytics.
 34. FAST22-Perseus: A Fail-Slow Detection Framework for Cloud Storage Systems
