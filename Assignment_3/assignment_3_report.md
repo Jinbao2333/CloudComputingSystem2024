@@ -1,7 +1,7 @@
 # Assignment 3
 
 > *姓名：姜嘉祺*
-> *学号：10225501447*
+> *学号：10225501447* 
 
 ## 实验背景
 Hadoop是一个开源的分布式计算平台，用于存储和处理大规模数据。它基于Google的MapReduce和Google File System的研究成果，提供了一个高效的分布式计算框架。Hadoop的核心组件包括Hadoop Common、Hadoop Distributed File System（HDFS）、Hadoop YARN和Hadoop MapReduce。
